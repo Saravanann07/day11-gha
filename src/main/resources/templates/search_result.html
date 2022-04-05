@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <tbody>
+        <h1 th:if="${comments.empty}">No comments</h1>
+        <div th:each="c: ${comments}"></div>
+        <div th:each="g: ${game.option}"></div>
+        <tr>
+            <td>
+                <img th:src="${g.image}">
+            </td>
+            <td>
+            Title: <code th:text="${g.name}"></code>
+           </td>
+        </tr>
+        <tr>
+            <td>
+                Year: <code th:text="${g.year}"></code>
+            </td>
+        </tr>
+    </tbody>
+</body>
+</html>
